@@ -1,0 +1,29 @@
+<form class="flex flex-col gap-5 bg-gray-200 p-5 shadow-xl border-gray-300 border-2"
+      [formGroup]="loginForm">
+    <!-- Login email -->
+    <fieldset class="flex flex-col gap-2">
+        <label for="email" class="font-semibold">Correo electrónico</label>
+        <input class="outline-0 border-2 border-gray-400/40 px-2" 
+               type="text" id="password" formControlName="email">
+    </fieldset>
+    <!-- Login password -->
+    <fieldset class="flex flex-col">
+        <label for="password" class="font-semibold">Contraseña</label>
+        <input class="outline-0 border-2 text-sm border-gray-400/40 px-2 py-0.5" 
+               type="password" id="password" formControlName="password">
+    </fieldset>
+
+    <!-- Error messages  -->
+    @if(emptyFields){
+        <span class="font-semibold text-red-950 mx-auto -my-3">Campos vacíos</span>
+    }
+    @if(invalidCredentials){
+        <span class="font-semibold text-red-950 mx-auto -my-3">Credenciales incorrectas</span>
+    }
+    <!-- Submit button  -->
+    <button class="bg-green-900 font-semibold text-white py-1 rounded-md
+                    cursor-pointer hover:scale-98 duration-150 delay-75"
+            (click)="onSubmit()">
+        Iniciar sesión
+    </button>
+</form>
