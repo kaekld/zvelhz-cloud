@@ -1,0 +1,19 @@
+@if(isLogin()){
+  <app-navbar></app-navbar>
+  <main class="flex flex-col gap-3 h-screen w-screen bg-gray-100 pl-74 pr-10 py-10">
+    <h1 class="font-bold text-3xl">ARCHIVOS SUBIDOS POR MÍ</h1>
+    <app-new-file></app-new-file>
+    <app-user-files></app-user-files>
+  </main>
+}
+@else {
+  <main class="flex flex-col gap-3 h-screen w-screen bg-gray-100 items-center justify-center">
+    <h1 class="font-extrabold text-5xl"> Aún no has iniciado sesión </h1>
+    <h2 class="text-xl"> Regresa a la pantalla de login </h2>
+    <button class="font-semibold text-2xl py-1 px-10 bg-cyan-600 text-white rounded-md
+                   cursor-pointer hover:scale-95 duration-200 delay-150"
+            routerLink="/login">
+      Iniciar sesión
+    </button>
+  </main>
+}

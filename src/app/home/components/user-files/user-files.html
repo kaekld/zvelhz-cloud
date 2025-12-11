@@ -1,0 +1,5 @@
+<section class="flex gap-5 flex-wrap">
+  @for (file of reversedFiles(); track $index) {
+    <app-file-card [fileData]="file" [viewDeleteButton]="true" (sendFileId)="deleteFile($event)"></app-file-card>
+  }
+</section>

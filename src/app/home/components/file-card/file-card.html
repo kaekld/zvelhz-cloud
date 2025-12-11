@@ -1,0 +1,34 @@
+<div class="shadow-md flex flex-col">
+
+  <div class="flex gap-3 items-center p-5">
+    <!-- File icon -->
+    <svg class="size-15 stroke-1 stroke-gray-500">
+      <use xlink:href="sprite.svg#file"></use>
+    </svg>
+    <!-- File data  -->
+    <div class="flex flex-col">
+      <span class="font-extrabold"> {{ fileData().nombreArchivo }} </span>
+      <span> {{ dateFormat() }} </span>
+    </div>
+    <!-- Download icon -->
+    <a [href]="fileUrl()" target="_blank" rel="noopener noreferrer">
+      <svg class="size-8 stroke-2 stroke-gray-600 hover:scale-110 cursor-pointer
+              duration-200 delay-150">
+        <use xlink:href="sprite.svg#download"></use>
+      </svg>
+    </a>
+
+  </div>
+
+  @if(viewDeleteButton()){
+    <button class="bg-gray-300 font-bold text-black py-1 cursor-pointer flex gap-2 items-center
+                    justify-center"
+            (click)="emitSendFileId()">
+      <svg class="size-8 stroke-2 stroke-gray-600">
+        <use xlink:href="sprite.svg#trash"></use>
+      </svg>
+      <span>Eliminar archivo</span>
+    </button>
+  }
+
+</div>

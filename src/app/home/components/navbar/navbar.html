@@ -1,0 +1,46 @@
+<div class="fixed top-0 left-0 flex flex-col justify-between bg-gray-800 w-3xs h-screen p-8">
+
+  <div class="flex flex-col">
+    <!-- web info -->
+    <div class="flex flex-col gap-1">
+      <h1 class="text-white text-2xl font-extrabold">
+        Zvelhz<span class="text-cyan-600 text-3xl">Cloud</span>
+      </h1>
+      <p class="text-gray-200 font-light">
+        La plataforma más segura del condado.
+      </p>
+    </div>
+
+    <nav class="flex flex-col gap-4 py-10 justify-center">
+
+      <button class="flex w-full px-3 py-2 items-center gap-3 text-white hover:bg-gray-700/50
+                     duration-150 cursor-pointer"
+              routerLink="/home">
+        <svg class="size-10">
+            <use xlink:href="sprite.svg#home"></use>
+        </svg>
+        <span class="font-semibold">Página de inicio</span>
+      </button>
+
+      <button class="flex w-full px-3 py-2 items-center gap-3 text-white hover:bg-gray-700/50
+                     duration-150 cursor-pointer"
+              routerLink="/myfiles">
+        <svg class="size-10">
+            <use xlink:href="sprite.svg#folder"></use>
+        </svg>
+        <span class="font-semibold">Mis archivos</span>
+      </button>
+
+    </nav>
+  </div>
+
+  <div class="flex flex-col bottom-0">
+    <span class="text-white">
+      Bienvenido de nuevo
+    </span>
+    <span class="font-bold text-white text-2xl">
+      {{ userName() }}
+    </span>
+  </div>
+
+</div>

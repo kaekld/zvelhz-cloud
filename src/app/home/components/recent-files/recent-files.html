@@ -1,0 +1,5 @@
+<section class="flex gap-5 flex-wrap">
+  @for (file of reversedFileList(); track $index) {
+    <app-file-card [fileData]="file" [viewDeleteButton]="false"></app-file-card>
+  }
+</section>

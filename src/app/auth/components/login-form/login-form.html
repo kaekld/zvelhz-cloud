@@ -1,15 +1,21 @@
-<form class="flex flex-col gap-5 bg-gray-200 p-5 shadow-xl border-gray-300 border-2"
+<form class="flex flex-col gap-5 w-full h-full justify-center bg-gray-200 rounded-md px-10 py-8 shadow-xl
+          border-gray-300 border-2"
       [formGroup]="loginForm">
+
+    <h1 class="mx-auto font-extrabold text-2xl">
+      INICIO DE SESIÓN
+    </h1>
+
     <!-- Login email -->
     <fieldset class="flex flex-col gap-2">
         <label for="email" class="font-semibold">Correo electrónico</label>
-        <input class="outline-0 border-2 border-gray-400/40 px-2" 
+        <input class="outline-0 border-2 border-gray-400/40 px-2"
                type="text" id="password" formControlName="email">
     </fieldset>
     <!-- Login password -->
     <fieldset class="flex flex-col">
         <label for="password" class="font-semibold">Contraseña</label>
-        <input class="outline-0 border-2 text-sm border-gray-400/40 px-2 py-0.5" 
+        <input class="outline-0 border-2 text-sm border-gray-400/40 px-2 py-0.5"
                type="password" id="password" formControlName="password">
     </fieldset>
 

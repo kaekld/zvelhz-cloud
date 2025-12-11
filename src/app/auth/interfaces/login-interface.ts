@@ -10,7 +10,3 @@ export interface LoginResponse {
     nombre:        string;
     password:      string;
 }
-
-export interface LoginErrorResponse {
-    access: string;
-}

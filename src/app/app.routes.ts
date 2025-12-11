@@ -7,6 +7,16 @@ export const routes: Routes = [
     }
   },
   {
+    path: 'home', loadComponent: () => {
+      return import('./home/pages/home/home').then(m => m.Home)
+    }
+  },
+  {
+    path: 'myfiles', loadComponent: () => {
+      return import('./home/pages/my-files/my-files').then(m => m.MyFiles)
+    }
+  },
+  {
     path: '**',
     redirectTo: 'login'
   }
