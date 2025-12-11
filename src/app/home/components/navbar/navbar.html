@@ -35,12 +35,24 @@
   </div>
 
   <div class="flex flex-col bottom-0">
+    <!-- Welcome message -->
     <span class="text-white">
       Bienvenido de nuevo
     </span>
     <span class="font-bold text-white text-2xl">
       {{ userName() }}
     </span>
+
+    <!-- Logout -->
+    <div class="flex items-center gap-2 mt-3 bg-gray-900 px-4 py-2 rounded-md">
+      <svg class="size-8 stroke-2 stroke-gray-200">
+        <use xlink:href="sprite.svg#logout"></use>
+      </svg>
+      <button class="text-white font-semibold w-fit cursor-pointer"
+              (click)="onLogout()">
+        Cerrar sesión
+      </button>
+    </div>
   </div>
 
 </div>
